@@ -1,0 +1,16 @@
+﻿# LocalVibe SpringBoot后端
+LocalVibe/target/
+LocalVibe/.idea/
+LocalVibe/*.iml
+
+
+# nginx目录忽略日志pid
+nginx/logs/
+nginx/*.pid
+nginx/*.lock
+
+# 全局idea
+.idea/
+*.log
+*.tmp
+.DS_Store

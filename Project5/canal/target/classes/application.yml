@@ -1,0 +1,33 @@
+server:
+  port: 8090
+  address: 0.0.0.0
+
+spring:
+  application:
+    name: canal
+  datasource:
+    url: jdbc:mysql://172.24.116.171:3307/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # ? ?????????? Spring Boot 3.x ??
+  data:
+    redis:
+      host: 172.24.116.171
+      port: 6379
+      database: 1
+      password: Cjx200621
+      timeout: 3000ms
+      lettuce:
+        pool:
+          max-active: 10
+          max-idle: 5
+          min-idle: 2
+
+
+canal:
+  # wsl?canal?deployer  tcp????
+  server: 172.24.116.171:11111
+  # destination ????????admin?????instance??????????example
+  destination: information
+

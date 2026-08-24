@@ -1,0 +1,43 @@
+#mysql的地址 用户 密码 canal redis rocketmq配置都需要改为自己的
+server:
+  port: 8084
+spring:
+  main:
+    allow-circular-references: true
+  application:
+    name: localvibe
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:
+    username: root
+    password: 1234
+
+
+
+  data:
+    redis:
+      host:
+      port:
+      database: 6  # 业务缓存库
+      password:
+      lettuce:
+        pool:
+          max-active: 20
+          max-idle: 10
+          min-idle: 5
+          time-between-eviction-runs: 10s
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+
+mybatis-plus:
+  type-aliases-package: com.localvibe.entity # 别名扫描包
+logging:
+  level:
+    com.localvibe: debug
+
+canal:
+  server:
+  destination:
+
+rocketmq:
+  name-server:
